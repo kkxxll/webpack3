@@ -67,11 +67,15 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-let func = () => {};
+// import 'babel-polyfill'
+var func = function func() {};
 
-const NUM = 45;
-let arr = [1, 2, 3];
-let arrB = arr.map(item => item * 2);
+var NUM = 45;
+var arr = [1, 2, 3];
+arr.includes(8);
+var arrB = arr.map(function (item) {
+  return item * 2;
+});
 console.log(new Set(arrB));
 
 /***/ })
