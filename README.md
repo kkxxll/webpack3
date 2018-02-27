@@ -21,4 +21,4 @@ npm i babel-preset-env -D
 
 targets: 用来指定对哪些语法进行编译
 
-执行webpack后，可以看到es6编译后的结果
+执行webpack后，可以看到babel编译后的结果
