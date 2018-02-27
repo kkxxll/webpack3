@@ -1,17 +1,16 @@
 module.exports = {
     entry: {
-        bundle: './app.js'
+        app: './src/app.ts'
     },
     output: {
-        filename: '[name].[hash:8].js'
-        // filename: '[name].js'
+        filename: '[name].bundle.js'
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.tsx?$/,
                 use: {
-                    loader: 'babel-loader'
+                    loader: 'ts-loader'
                 },
                 exclude: '/node_modules/'
             }
