@@ -67,13 +67,11 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-var func = function func() {};
+let func = () => {};
 
-var NUM = 45;
-var arr = [1, 2, 3];
-var arrB = arr.map(function (item) {
-  return item * 2;
-});
+const NUM = 45;
+let arr = [1, 2, 3];
+let arrB = arr.map(item => item * 2);
 console.log(new Set(arrB));
 
 /***/ })
