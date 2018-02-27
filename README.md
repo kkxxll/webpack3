@@ -7,3 +7,5 @@
 之前没有注意，所以需要重新安装
 
 npm i @babel/runtime -S
+
+使用babel-runtime还是babel-polyfill取决于全局环境是否可以被污染，不可以则用前者
