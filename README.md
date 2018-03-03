@@ -1,3 +1,1 @@
-取一个 entry 中的没有的名字如 manifest
-就可以实现 第三方依赖与webpack生成代码 分别打包到不同的文件
-这样使第三方依赖文件更纯粹，即vender.bundle.js里只有lodash
+打包业务代码的公共部分需要 chunks参数

@@ -13,12 +13,23 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'vender',
-            minChunks: Infinity
+            name: 'common',
+            minChunks: 2,
+            chunks: ['pageA', 'pageB']
         }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'vender',
+        //     minChunks: Infinity
+        // }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'manifest',
+        //     minChunks: Infinity
+        // })
+        // 简写
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'manifest',
+            name: ['vender', 'manifest'],
             minChunks: Infinity
         })
+
     ]
 }
