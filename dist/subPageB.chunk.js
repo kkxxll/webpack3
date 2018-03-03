@@ -7,6 +7,9 @@ webpackJsonp([1],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__moduleAB__ = __webpack_require__(0);
 
+
+console.log('i am subpageB')
+
 /* harmony default export */ __webpack_exports__["default"] = ('subPageB');
 
 /***/ })

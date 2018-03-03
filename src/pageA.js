@@ -3,8 +3,12 @@
 
 require.include('./moduleAB')
 
+var page = 'subPageA'
+
 if(page === 'subPageA') {
     require.ensure(['./subPageA'], function() {
+        // 执行一下这行，subpageA才会被执行，若注释，则表示
+        // subpageA只会被加载，还没有执行
         var subPageA = require('./subPageA')
     }, 'subPageA')
 } else {
