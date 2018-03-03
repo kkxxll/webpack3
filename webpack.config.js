@@ -2,7 +2,8 @@ var webpack = require('webpack')
 var path = require('path')
 module.exports = {
     entry: {
-        pageA: './src/pageA'
+        pageA: './src/pageA',
+        pageB: './src/pageB',
     },
     output: {
         path: path.resolve(__dirname, './dist'),
