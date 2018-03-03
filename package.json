@@ -16,13 +16,8 @@
     "url": "https://github.com/kkxxll/webpack3/issues"
   },
   "homepage": "https://github.com/kkxxll/webpack3#readme",
-  "dependencies": {
-    "lodash": "^4.17.5"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "awesome-typescript-loader": "^3.5.0",
-    "ts-loader": "^3.5.0",
-    "typescript": "^2.7.2",
     "webpack": "^3.11.0"
   }
 }

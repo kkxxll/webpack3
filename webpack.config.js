@@ -1,19 +1,18 @@
+var webpack = require('webpack')
+var path = require('path')
 module.exports = {
     entry: {
-        app: './src/app.ts'
+        pageA: './src/pageA'
     },
     output: {
-        filename: '[name].bundle.js'
+        path: path.resolve(__dirname, './dist'),
+        filename: '[name].bundle.js',
+        chunkFilename: '[name].chunk.js'
     },
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                use: {
-                    loader: 'ts-loader'
-                },
-                exclude: '/node_modules/'
-            }
-        ]
-    }
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common',
+            minChunks: 2
+        })
+    ]
 }

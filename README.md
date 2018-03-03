@@ -1,11 +1,20 @@
-#### 编译typescript
+#### 打包公共代码
+使用webpack内置插件 CommonsChunkPlugin
 
-#### 安装（任意一个即可）
-npm i typescript ts-loader -D (官方出品)
-npm i typescript awesome-typescript-loader -D (第三方出品)
+plugins: [
+    new webpack.optimize.CommonsChunkPlugin(options)
+]
 
-#### 配置
-tscofing.json
-webpack.config.js
+##### options参数
+- name/names
+- filename
+- minChunks
+    + number 表示出现几次会被作为公共部分提取
+    + funtion 自定义提取规则
 
-typescript结合js一起使用
+##### 场景
+- 单页应用
+- 单页应用+第三方依赖
+- 多页应用+第三方依赖+webpack生产代码(如内置函数）
+
+在单页面应用里，打包后的common.bundle.js不会提取公共的部分
