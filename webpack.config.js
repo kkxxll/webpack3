@@ -15,6 +15,10 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vender',
             minChunks: Infinity
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'manifest',
+            minChunks: Infinity
         })
     ]
 }
