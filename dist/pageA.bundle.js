@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		1: 0
+/******/ 		3: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + ({"0":"vender"}[chunkId]||chunkId) + ".chunk.js";
+/******/ 		script.src = __webpack_require__.p + "" + ({"0":"vender","1":"subPageB","2":"subPageA"}[chunkId]||chunkId) + ".chunk.js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -142,7 +142,7 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -153,15 +153,29 @@
 /* unused harmony default export */ var _unused_webpack_default_export = ('moduleAB');
 
 /***/ }),
-/* 1 */
+/* 1 */,
+/* 2 */,
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__subPageA__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__subPageB__ = __webpack_require__(3);
+// import './subPageA'
+// import './subPageB'
 
+undefined/*! require.include ./moduleAB */
 
+if(page === 'subPageA') {
+    __webpack_require__.e/* require.ensure */(2).then((function() {
+        var subPageA = __webpack_require__(1)
+    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe)
+} else {
+    __webpack_require__.e/* require.ensure */(1).then((function() {
+        var subPageB = __webpack_require__(2)
+    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe)
+}
+
+// import * as _ from 'lodash'
 
 __webpack_require__.e/* require.ensure */(0).then((function() {
     var _ = __webpack_require__(4)
@@ -169,24 +183,6 @@ __webpack_require__.e/* require.ensure */(0).then((function() {
 }).bind(null, __webpack_require__)).catch(__webpack_require__.oe)
 
 /* harmony default export */ __webpack_exports__["default"] = ('pageA');
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__moduleAB__ = __webpack_require__(0);
-
-/* unused harmony default export */ var _unused_webpack_default_export = ('subPageA');
-
-/***/ }),
-/* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__moduleAB__ = __webpack_require__(0);
-
-/* unused harmony default export */ var _unused_webpack_default_export = ('subPageB');
 
 /***/ })
 /******/ ]);
