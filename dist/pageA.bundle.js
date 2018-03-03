@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + ({"0":"vender","1":"subPageB","2":"subPageA"}[chunkId]||chunkId) + ".chunk.js";
+/******/ 		script.src = __webpack_require__.p + "" + ({"0":"vender","1":"subpageB","2":"subpageA"}[chunkId]||chunkId) + ".chunk.js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -142,7 +142,7 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -153,9 +153,7 @@
 /* unused harmony default export */ var _unused_webpack_default_export = ('moduleAB');
 
 /***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -168,13 +166,13 @@ undefined/*! require.include ./moduleAB */
 var page = 'subPageA'
 
 if(page === 'subPageA') {
-    __webpack_require__.e/* require.ensure */(2).then((function() {
-        var subPageA = __webpack_require__(1)
-    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe)
+    __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 2)).then(function(subPageA) {
+        console.log(subPageA)
+    })
 } else {
-    __webpack_require__.e/* require.ensure */(1).then((function() {
-        var subPageB = __webpack_require__(2)
-    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe)
+    __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 3)).then(function(subPageB) {
+        console.log(subPageB)
+    })
 }
 
 // import * as _ from 'lodash'

@@ -6,15 +6,14 @@ require.include('./moduleAB')
 var page = 'subPageA'
 
 if(page === 'subPageA') {
-    require.ensure(['./subPageA'], function() {
-        // 执行一下这行，subpageA才会被执行，若注释，则表示
-        // subpageA只会被加载，还没有执行
-        var subPageA = require('./subPageA')
-    }, 'subPageA')
+    // 若不指定webpackChunkName 则会生成 number.chunk.js
+    import(/* webpackChunkName: 'subpageA' */'./subPageA').then(function(subPageA) {
+        console.log(subPageA)
+    })
 } else {
-    require.ensure(['./subPageB'], function() {
-        var subPageB = require('./subPageB')
-    }, 'subPageB')
+    import(/* webpackChunkName: 'subpageB' */'./subPageB').then(function(subPageB) {
+        console.log(subPageB)
+    })
 }
 
 // import * as _ from 'lodash'
