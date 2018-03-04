@@ -3,3 +3,6 @@
 webpack打包后可以看到在 bundle.js里有两种注释
 harmony export 表示用到的
 unused harmony export c 表示没有用到的
+
+new Webpack.optimize.UglifyJsPlugin()
+配置后，没有用到的就不会被webpack打包

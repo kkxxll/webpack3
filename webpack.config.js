@@ -1,4 +1,5 @@
 var path = require('path')
+var Webpack = require('webpack')
 var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
@@ -54,6 +55,7 @@ module.exports = {
         new ExtractTextWebpackPlugin({
             filename: '[name].min.css',
             allChunks: true
-        })
+        }),
+        new Webpack.optimize.UglifyJsPlugin()
     ]
 }
