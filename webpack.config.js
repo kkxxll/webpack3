@@ -41,7 +41,8 @@ module.exports = {
                                 ident: 'postcss',
                                 plugins: [
                                     require('postcss-sprites')({
-                                        spritePath: 'dist/assets/imgs/sprites'
+                                        spritePath: 'dist/assets/imgs/sprites',
+                                        retina: true
                                     }),
                                     require('postcss-cssnext')()
                                 ]
