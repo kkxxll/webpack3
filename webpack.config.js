@@ -15,6 +15,11 @@ module.exports = {
         filename: '[name].bundle.js',
         chunkFilename: '[name].chunk.js'
     },
+    resolve: {
+        alias: {
+            jquery$: path.resolve(__dirname, 'src/libs/jquery.min.js')
+        }
+    },
     module: {
         rules: [
             {
