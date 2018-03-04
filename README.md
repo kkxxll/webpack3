@@ -16,3 +16,6 @@
 
 
 npm i file-loader url-loader img-loader postcss-sprites -D
+
+小于10kb的时候 用base64
+limit: 10000

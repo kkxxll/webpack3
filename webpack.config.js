@@ -54,11 +54,21 @@ module.exports = {
             {
                 test: /\.(png|jpg|jpeg|gif)$/,
                 use: [
+                    // {
+                    //     loader: 'file-loader',
+                    //     options: {
+                    //         publicPath: '',
+                    //         // outputPath: 'dist/',
+                    //         outputPath: '',
+                    //         useRelativePath: true
+                    //     }
+                    // }
                     {
-                        loader: 'file-loader',
+                        loader: 'url-loader',
                         options: {
+                            limit: 10000,
                             publicPath: '',
-                            // outputPath: 'dist/',
+                            outputPath: 'dist/',
                             outputPath: '',
                             useRelativePath: true
                         }
