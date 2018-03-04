@@ -2,6 +2,9 @@ var path = require('path')
 var Webpack = require('webpack')
 var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
+var PurifyCSS = require('purifycss-webpack')
+var glob = require('glob-all')
+
 module.exports = {
     entry: {
         app: './src/app.js'
@@ -65,8 +68,13 @@ module.exports = {
     },
     plugins: [
         new ExtractTextWebpackPlugin({
-            filename: '[name].min.css',
-            allChunks: true
+            filename: '[name].min.css'
+        }),
+        new PurifyCSS({
+            paths: glob.sync([
+                path.join(__dirname, './*.html'),
+                path.join(__dirname, './src/*.js')
+            ])
         }),
         new Webpack.optimize.UglifyJsPlugin()
     ]
