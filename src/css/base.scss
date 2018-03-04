@@ -2,15 +2,26 @@ html {
     background: #eee;
 }
 
+.box {
+    border: 2px solid red;
+    background: yellow; 
+    width: 200px;
+    height: 200px;
+}
+
 .bigbox {
     border: 2px solid red;
     background: yellow; 
+    width: 100px;
+    height: 100px;
+}
+.bigbox-1 {
+    border: 2px solid red;
+    background: yellow; 
+    width: 100px;
+    height: 100px;
 }
 
-:root {
-    --mainColor: red;
-}
-
-h5 {
-    color: var(--mainColor)
+.box-header {
+    font-size: 20px;
 }

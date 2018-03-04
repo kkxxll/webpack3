@@ -4,7 +4,7 @@ import base from './css/base.scss'
 // import './components/a.js'
 
 var app = document.getElementById('app');
-// app.innerHTML = '<div class="' + common.box + '"></div>'
+// // app.innerHTML = '<div class="' + common.box + '"></div>'
 
 var div = document.createElement('div')
 div.className = 'box'
