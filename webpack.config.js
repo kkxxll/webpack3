@@ -42,7 +42,8 @@ module.exports = {
     },
     plugins: [
         new ExtractTextWebpackPlugin({
-            filename: '[name].min.css'
+            filename: '[name].min.css',
+            allChunks: true
         })
     ]
 }
