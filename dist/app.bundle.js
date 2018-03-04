@@ -554,11 +554,11 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "html {\n    background: #eee;\n}\n\n.src-css-base_bigbox_2aOby {\n    border: 2px solid red;\n    background: yellow; \n}", ""]);
+exports.push([module.i, "html {\n    background: #eee;\n}\n\n.src-css-base_bigbox_1RWkp {\n    border: 2px solid red;\n    background: yellow; \n}", ""]);
 
 // exports
 exports.locals = {
-	"bigbox": "src-css-base_bigbox_2aOby"
+	"bigbox": "src-css-base_bigbox_1RWkp"
 };
 
 /***/ }),
@@ -567,15 +567,15 @@ exports.locals = {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_less__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_base_less__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_less__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_common_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_scss__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_base_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_scss__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_common_scss__);
 
 
 
 var app = document.getElementById('app');
-app.innerHTML = '<div class="' + __WEBPACK_IMPORTED_MODULE_1__css_common_less___default.a.box + '"></div>'
+app.innerHTML = '<div class="' + __WEBPACK_IMPORTED_MODULE_1__css_common_scss___default.a.box + '"></div>'
 
 /***/ }),
 /* 5 */
@@ -601,8 +601,8 @@ var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/less-loader/dist/cjs.js!./base.less", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/less-loader/dist/cjs.js!./base.less");
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/sass-loader/lib/loader.js!./base.scss", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/sass-loader/lib/loader.js!./base.scss");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -636,11 +636,11 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "html {\n  background: #eee;\n}\n.src-css-base_bigbox_2aOby {\n  border: 2px solid red;\n  background: yellow;\n}\n", ""]);
+exports.push([module.i, "html {\n  background: #eee; }\n\n.src-css-base_bigbox_1RWkp {\n  border: 2px solid red;\n  background: yellow; }\n", ""]);
 
 // exports
 exports.locals = {
-	"bigbox": "src-css-base_bigbox_2aOby"
+	"bigbox": "src-css-base_bigbox_1RWkp"
 };
 
 /***/ }),
@@ -762,8 +762,8 @@ var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/less-loader/dist/cjs.js!./common.less", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/less-loader/dist/cjs.js!./common.less");
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/sass-loader/lib/loader.js!./common.scss", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/sass-loader/lib/loader.js!./common.scss");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -797,11 +797,11 @@ exports = module.exports = __webpack_require__(0)(false);
 exports.i(__webpack_require__(3), undefined);
 
 // module
-exports.push([module.i, "html {\n  color: pink;\n}\n.src-css-common_box_Q0a4x {\n  height: 100px;\n  background: #333;\n}\n", ""]);
+exports.push([module.i, "html {\n  color: purple; }\n\n.src-css-common_box_3OZQl {\n  height: 100px;\n  background: #333; }\n", ""]);
 
 // exports
 exports.locals = {
-	"box": "src-css-common_box_Q0a4x " + __webpack_require__(3).locals["bigbox"] + ""
+	"box": "src-css-common_box_3OZQl " + __webpack_require__(3).locals["bigbox"] + ""
 };
 
 /***/ })

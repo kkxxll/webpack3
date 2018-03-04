@@ -1,0 +1,11 @@
+$homecolor: purple;
+
+html {
+    color: $homecolor;
+}
+
+.box {
+    composes: bigbox from './base.scss';
+    height: 100px;
+    background: #333;
+} 
