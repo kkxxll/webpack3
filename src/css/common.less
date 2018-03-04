@@ -1,0 +1,11 @@
+@homecolor: pink;
+
+html {
+    color: @homecolor;
+}
+
+.box {
+    composes: bigbox from './base.less';
+    height: 100px;
+    background: #333;
+} 

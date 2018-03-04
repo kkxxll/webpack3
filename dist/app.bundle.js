@@ -65,22 +65,6 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)(false);
-// imports
-
-
-// module
-exports.push([module.i, "html {\n    background: #eee;\n}\n\n.src-css-base_bigbox_3a8bF {\n    border: 2px solid red;\n    background: yellow; \n}", ""]);
-
-// exports
-exports.locals = {
-	"bigbox": "src-css-base_bigbox_3a8bF"
-};
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
 /*
@@ -162,7 +146,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 2 */
+/* 1 */
 /***/ (function(module, exports) {
 
 module.exports = function(css) {
@@ -180,7 +164,7 @@ module.exports = function(css) {
 }
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -246,7 +230,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(6);
+var	fixUrls = __webpack_require__(7);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -562,47 +546,63 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "html {\n    background: #eee;\n}\n\n.src-css-base_bigbox_2aOby {\n    border: 2px solid red;\n    background: yellow; \n}", ""]);
+
+// exports
+exports.locals = {
+	"bigbox": "src-css-base_bigbox_2aOby"
+};
+
+/***/ }),
 /* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_css__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_base_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_css__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_common_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_less__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_base_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_less__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_common_less__);
 
 
 
-// var app = document.getElementById('app');
-// app.innerHTML = '<div class="' + common.box + '"></div>'
+var app = document.getElementById('app');
+app.innerHTML = '<div class="' + __WEBPACK_IMPORTED_MODULE_1__css_common_less___default.a.box + '"></div>'
 
 /***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(0);
+var content = __webpack_require__(6);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
 var transform;
 var insertInto;
 
-transform = __webpack_require__(2);
+transform = __webpack_require__(1);
 
 var options = {"singleton":true,"transform":"./css.transform.js","hmr":true}
 
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(3)(content, options);
+var update = __webpack_require__(2)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--0-1!./base.css", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js??ref--0-1!./base.css");
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/less-loader/dist/cjs.js!./base.less", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/less-loader/dist/cjs.js!./base.less");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -629,6 +629,22 @@ if(false) {
 
 /***/ }),
 /* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "html {\n  background: #eee;\n}\n.src-css-base_bigbox_2aOby {\n  border: 2px solid red;\n  background: yellow;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"bigbox": "src-css-base_bigbox_2aOby"
+};
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports) {
 
 
@@ -723,31 +739,31 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(8);
+var content = __webpack_require__(9);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
 var transform;
 var insertInto;
 
-transform = __webpack_require__(2);
+transform = __webpack_require__(1);
 
 var options = {"singleton":true,"transform":"./css.transform.js","hmr":true}
 
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(3)(content, options);
+var update = __webpack_require__(2)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--0-1!./common.css", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js??ref--0-1!./common.css");
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/less-loader/dist/cjs.js!./common.less", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/less-loader/dist/cjs.js!./common.less");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -773,19 +789,19 @@ if(false) {
 }
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(1)(false);
+exports = module.exports = __webpack_require__(0)(false);
 // imports
-exports.i(__webpack_require__(0), undefined);
+exports.i(__webpack_require__(3), undefined);
 
 // module
-exports.push([module.i, "html {\n    color: red;\n}\n\n.src-css-common_box_2_1PR {\n    height: 100px;\n    background: #333;\n} ", ""]);
+exports.push([module.i, "html {\n  color: pink;\n}\n.src-css-common_box_Q0a4x {\n  height: 100px;\n  background: #333;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"box": "src-css-common_box_2_1PR " + __webpack_require__(0).locals["bigbox"] + ""
+	"box": "src-css-common_box_Q0a4x " + __webpack_require__(3).locals["bigbox"] + ""
 };
 
 /***/ })
