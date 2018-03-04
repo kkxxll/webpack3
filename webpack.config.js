@@ -18,13 +18,15 @@ module.exports = {
                         loader: 'style-loader',
                         options: {
                             singleton: true,
-                            insertInto: '#app',
                             transform: './css.transform.js'
                         }
                     },
                     {
-                        loader: 'css-loader'
-                        // loader: 'file-loader'
+                        loader: 'css-loader',
+                        options: {
+                            minimize: true,
+                            modules: true
+                        }
                     }
                 ]
             }

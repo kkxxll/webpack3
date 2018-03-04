@@ -1,3 +1,9 @@
-div {
+html {
     color: red;
 }
+
+.box {
+    composes: bigbox from './base.css';
+    height: 100px;
+    background: #333;
+} 

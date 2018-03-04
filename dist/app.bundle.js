@@ -60,11 +60,27 @@
 /******/ 	__webpack_require__.p = "./dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, "html{background:#eee}._3a8bFTDWQc-TRvxdVpNH3M{border:2px solid red;background:#ff0}", ""]);
+
+// exports
+exports.locals = {
+	"bigbox": "_3a8bFTDWQc-TRvxdVpNH3M"
+};
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 /*
@@ -146,25 +162,25 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports) {
 
 module.exports = function(css) {
-    console.log(css)
-    console.log(window.innerWidth)
+    // console.log(css)
+    // console.log(window.innerWidth)
 
-    if (window.innerWidth >= 768) {
-        return css.replace('#eee', 'green')
-    } else {
-        return css.replace('#eee', 'yellow')
-    }
+    // if (window.innerWidth >= 768) {
+    //     return css.replace('#eee', 'green')
+    // } else {
+    //     return css.replace('#eee', 'yellow')
+    // }
 
     // 若没有任何操作，则return css 即可
-    // return css 
+    return css 
 }
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -546,44 +562,47 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_common_css__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_common_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_base_css__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_base_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_base_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_css__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_base_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_css__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_common_css__);
 
 
+
+// var app = document.getElementById('app');
+// app.innerHTML = '<div class="' + common.box + '"></div>'
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(5);
+var content = __webpack_require__(0);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
 var transform;
 var insertInto;
 
-transform = __webpack_require__(1);
+transform = __webpack_require__(2);
 
-var options = {"singleton":true,"insertInto":"#app","transform":"./css.transform.js","hmr":true}
+var options = {"singleton":true,"transform":"./css.transform.js","hmr":true}
 
 options.transform = transform
-options.insertInto = "#app";
+options.insertInto = undefined;
 
-var update = __webpack_require__(2)(content, options);
+var update = __webpack_require__(3)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js!./common.css", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js!./common.css");
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--0-1!./base.css", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--0-1!./base.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -607,20 +626,6 @@ if(false) {
 
 	module.hot.dispose(function() { update(); });
 }
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// imports
-
-
-// module
-exports.push([module.i, "div {\n    color: red;\n}", ""]);
-
-// exports
-
 
 /***/ }),
 /* 6 */
@@ -729,20 +734,20 @@ if(typeof content === 'string') content = [[module.i, content, '']];
 var transform;
 var insertInto;
 
-transform = __webpack_require__(1);
+transform = __webpack_require__(2);
 
-var options = {"singleton":true,"insertInto":"#app","transform":"./css.transform.js","hmr":true}
+var options = {"singleton":true,"transform":"./css.transform.js","hmr":true}
 
 options.transform = transform
-options.insertInto = "#app";
+options.insertInto = undefined;
 
-var update = __webpack_require__(2)(content, options);
+var update = __webpack_require__(3)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js!./base.css", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js!./base.css");
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--0-1!./common.css", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--0-1!./common.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -771,15 +776,17 @@ if(false) {
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
-
+exports.i(__webpack_require__(0), undefined);
 
 // module
-exports.push([module.i, "div {\n    background: #eee;\n}", ""]);
+exports.push([module.i, "html{color:red}._2_1PR05yx3WuZ9HWslWj4w{height:100px;background:#333}", ""]);
 
 // exports
-
+exports.locals = {
+	"box": "_2_1PR05yx3WuZ9HWslWj4w " + __webpack_require__(0).locals["bigbox"] + ""
+};
 
 /***/ })
 /******/ ]);

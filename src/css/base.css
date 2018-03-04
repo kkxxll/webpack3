@@ -1,3 +1,8 @@
-div {
+html {
     background: #eee;
+}
+
+.bigbox {
+    border: 2px solid red;
+    background: yellow; 
 }
