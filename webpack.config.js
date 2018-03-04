@@ -62,15 +62,22 @@ module.exports = {
                     //         outputPath: '',
                     //         useRelativePath: true
                     //     }
-                    // }
+                    // },
                     {
                         loader: 'url-loader',
                         options: {
                             limit: 10000,
-                            publicPath: '',
-                            outputPath: 'dist/',
+                            publicPath: './assets',
                             outputPath: '',
                             useRelativePath: true
+                        }
+                    },
+                    {
+                        loader: 'img-loader',
+                        options: {
+                            pngquant: {
+                                quality: 80
+                            }
                         }
                     }
                 ]

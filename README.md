@@ -19,3 +19,17 @@ npm i file-loader url-loader img-loader postcss-sprites -D
 
 小于10kb的时候 用base64
 limit: 10000
+
+配置 请求时候的地址
+publicPath: './assets'
+
+
+配置 图片物理位置的地址
+outputPath: '',
+useRelativePath: true
+
+图片压缩
+配置压缩比例
+pngquant: {
+    quality: 80
+}
