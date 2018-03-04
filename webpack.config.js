@@ -6,7 +6,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: '[name].bundle.js'
+        publicPath: './dist/',
+        filename: '[name].bundle.js',
     },
     module: {
         rules: [
@@ -14,10 +15,11 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     {
-                        loader: 'style-loader'
+                        loader: 'style-loader/url'
                     },
                     {
-                        loader: 'css-loader'
+                        // loader: 'css-loader'
+                        loader: 'file-loader'
                     }
                 ]
             }

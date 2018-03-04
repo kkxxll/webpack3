@@ -7,4 +7,5 @@
 - 提取css代码
 
 
-webpack会自动将css样式以style标签的形式写入html中
+本节 webpack会自动将css样式以 link 标签的形式写入html中
+但是由于多个css文件会以多个link标签引入，造成多个网络请求，所以不建议使用本节的这种方式引入css
