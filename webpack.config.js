@@ -52,13 +52,15 @@ module.exports = {
                 })
             },
             {
-                test: /\.js$/,
+                test: /\.(png|jpg|jpeg|gif)$/,
                 use: [
                     {
-                        loader: 'babel-loader',
+                        loader: 'file-loader',
                         options: {
-                            presets: ['env'],
-                            plugins: ['lodash']
+                            publicPath: '',
+                            // outputPath: 'dist/',
+                            outputPath: '',
+                            useRelativePath: true
                         }
                     }
                 ]

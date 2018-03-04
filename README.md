@@ -1,9 +1,18 @@
-#### tree shanking(没有用到的代码会被自动移除)
+### 文件处理
+- 图片处理
+- 字体js库
+- 第三方js库（非node_modules里的）
 
-purify css
 
-npm i purify-css purifycss-webpack glob-all -D
+##### 图片处理
+- css中引入的图片（即background:url...）
+    + file-loader
+- 自动合成雪碧图
+    + postcss-sprites
+- 压缩图片
+    + img-loader
+- base64编码
+    + url-loader
 
-注意 purifycss-webpack配置写在extract-text-webpack-plugin后面
 
-purify css不能与css modules 一起使用
+npm i file-loader url-loader img-loader postcss-sprites -D

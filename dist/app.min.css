@@ -2,23 +2,15 @@ html {
   background: #eee;
 }
 
-.box {
-  border: 2px solid red;
-  background: yellow;
+div {
   width: 200px;
   height: 200px;
 }
 
-.bigbox {
-  border: 2px solid red;
-  background: yellow;
-  width: 100px;
-  height: 100px;
+.box1 {
+  background: url(./dist/assets/e6bc53bab9ef11989938b7c2baf21954.jpg) no-repeat;
 }
 
-.bigbox-1 {
-  border: 2px solid red;
-  background: yellow;
-  width: 100px;
-  height: 100px;
+.box2 {
+  background: url(./dist/assets/4bbea09d7bd18eec32dc21de309efb55.png) no-repeat;
 }

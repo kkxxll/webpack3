@@ -2,26 +2,14 @@ html {
     background: #eee;
 }
 
-.box {
-    border: 2px solid red;
-    background: yellow; 
+div {
     width: 200px;
     height: 200px;
 }
 
-.bigbox {
-    border: 2px solid red;
-    background: yellow; 
-    width: 100px;
-    height: 100px;
+.box1 {
+    background: url('../assets/1.jpg') no-repeat;
 }
-.bigbox-1 {
-    border: 2px solid red;
-    background: yellow; 
-    width: 100px;
-    height: 100px;
-}
-
-.box-header {
-    font-size: 20px;
+.box2 {
+    background: url('../assets/2.png') no-repeat;
 }
