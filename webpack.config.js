@@ -1,4 +1,5 @@
 var path = require('path')
+var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
     entry: {
@@ -8,75 +9,40 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         publicPath: './dist/',
         filename: '[name].bundle.js',
+        chunkFilename: '[name].chunk.js'
     },
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: [
-                    {
-                        loader: 'style-loader',
-                        options: {
-                            singleton: true,
-                            transform: './css.transform.js'
-                        }
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            // minimize: true,
-                            modules: true,
-                            localIdentName: '[path][name]_[local]_[hash:base64:5]'
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.less$/,
-                use: [
-                    {
-                        loader: 'style-loader',
-                        options: {
-                            singleton: true,
-                            transform: './css.transform.js'
-                        }
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            // minimize: true,
-                            modules: true,
-                            localIdentName: '[path][name]_[local]_[hash:base64:5]'
-                        }
-                    },
-                    {
-                        loader: 'less-loader'
-                    }
-                ]
-            },
-            {
                 test: /\.scss$/,
-                use: [
-                    {
+                use: ExtractTextWebpackPlugin.extract({
+                    fallback: {
                         loader: 'style-loader',
                         options: {
                             singleton: true,
                             transform: './css.transform.js'
                         }
                     },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            // minimize: true,
-                            modules: true,
-                            localIdentName: '[path][name]_[local]_[hash:base64:5]'
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                // minimize: true,
+                                modules: true,
+                                localIdentName: '[path][name]_[local]_[hash:base64:5]'
+                            }
+                        },
+                        {
+                            loader: 'sass-loader'
                         }
-                    },
-                    {
-                        loader: 'sass-loader'
-                    }
-                ]
+                    ]
+                })
             }
         ]
-    }
+    },
+    plugins: [
+        new ExtractTextWebpackPlugin({
+            filename: '[name].min.css'
+        })
+    ]
 }
