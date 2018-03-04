@@ -40,7 +40,9 @@ module.exports = {
                             options: {
                                 ident: 'postcss',
                                 plugins: [
-                                    // require('autoprefixer')(),//postcss-cssnext中已包含了autoprefixer
+                                    require('postcss-sprites')({
+                                        spritePath: 'dist/assets/imgs/sprites'
+                                    }),
                                     require('postcss-cssnext')()
                                 ]
                             }
@@ -66,20 +68,20 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 10000,
-                            publicPath: './assets',
+                            limit: 1000,
+                            publicPath: './assets/imgs/sprites/',
                             outputPath: '',
                             useRelativePath: true
                         }
                     },
-                    {
-                        loader: 'img-loader',
-                        options: {
-                            pngquant: {
-                                quality: 80
-                            }
-                        }
-                    }
+                    // {
+                    //     loader: 'img-loader',
+                    //     options: {
+                    //         pngquant: {
+                    //             quality: 80
+                    //         }
+                    //     }
+                    // }
                 ]
             }
         ]
