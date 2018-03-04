@@ -16,7 +16,9 @@
     "url": "https://github.com/kkxxll/webpack3/issues"
   },
   "homepage": "https://github.com/kkxxll/webpack3#readme",
-  "dependencies": {},
+  "dependencies": {
+    "imports-loader": "^0.8.0"
+  },
   "devDependencies": {
     "autoprefixer": "^8.1.0",
     "css-loader": "^0.28.10",

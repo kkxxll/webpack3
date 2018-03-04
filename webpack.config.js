@@ -105,6 +105,17 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: path.resolve(__dirname, 'src/app.js'),
+                use: [
+                    {
+                        loader: 'imports-loader',
+                        options: {
+                            $: 'jquery'
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -118,9 +129,9 @@ module.exports = {
                 path.join(__dirname, './src/*.js')
             ])
         }),
-        new Webpack.ProvidePlugin({
-            $: 'jquery'
-        }),
+        // new Webpack.ProvidePlugin({
+        //     $: 'jquery'
+        // }),
         new Webpack.optimize.UglifyJsPlugin()
     ]
 }
