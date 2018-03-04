@@ -85,6 +85,21 @@ module.exports = {
                     //     }
                     // }
                 ]
+            },
+            {
+                test: /\.(eot|woff2?|ttf|svg)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            name: '[name][hash:5].[ext]',
+                            limit: 1000,
+                            publicPath: './assets/fonts/',
+                            outputPath: '',
+                            useRelativePath: true
+                        }
+                    }
+                ]
             }
         ]
     },

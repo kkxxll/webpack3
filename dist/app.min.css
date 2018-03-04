@@ -1,22 +1,12 @@
-html {
-  background: #eee;
+@font-face {
+  font-family: 'FontAwesoeme';
+  src: url(./assets/fonts/fontawesome-webfont674f5.eot), url(./assets/fonts/fontawesome-webfont912ec.svg), url(./assets/fonts/fontawesome-webfontb0687.ttf), url(./assets/fonts/fontawesome-webfontfee66.woff), url(./assets/fonts/fontawesome-webfontaf7ae.woff2);
 }
 
 div {
-  width: 100px;
-  height: 100px;
+  font-family: FontAwesoeme;
 }
 
-.box1 {
-  width: 50px;
-  height: 50px;
-  background-image: url(./assets/imgs/sprites/sprite.@2xcd067.png);
-  background-position: 0px 0px;
-  background-size: 64px 32px;
-}
-
-.box2 {
-  background-image: url(./assets/imgs/sprites/sprite.@2xcd067.png);
-  background-position: -32px 0px;
-  background-size: 64px 32px;
+.fa-folder::before {
+  content: "\F07B";
 }
