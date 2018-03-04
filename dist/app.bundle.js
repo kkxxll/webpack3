@@ -72,11 +72,11 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "html{background:#eee}._3a8bFTDWQc-TRvxdVpNH3M{border:2px solid red;background:#ff0}", ""]);
+exports.push([module.i, "html {\n    background: #eee;\n}\n\n.src-css-base_bigbox_3a8bF {\n    border: 2px solid red;\n    background: yellow; \n}", ""]);
 
 // exports
 exports.locals = {
-	"bigbox": "_3a8bFTDWQc-TRvxdVpNH3M"
+	"bigbox": "src-css-base_bigbox_3a8bF"
 };
 
 /***/ }),
@@ -781,11 +781,11 @@ exports = module.exports = __webpack_require__(1)(false);
 exports.i(__webpack_require__(0), undefined);
 
 // module
-exports.push([module.i, "html{color:red}._2_1PR05yx3WuZ9HWslWj4w{height:100px;background:#333}", ""]);
+exports.push([module.i, "html {\n    color: red;\n}\n\n.src-css-common_box_2_1PR {\n    height: 100px;\n    background: #333;\n} ", ""]);
 
 // exports
 exports.locals = {
-	"box": "_2_1PR05yx3WuZ9HWslWj4w " + __webpack_require__(0).locals["bigbox"] + ""
+	"box": "src-css-common_box_2_1PR " + __webpack_require__(0).locals["bigbox"] + ""
 };
 
 /***/ })
