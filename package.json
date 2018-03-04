@@ -16,10 +16,9 @@
     "url": "https://github.com/kkxxll/webpack3/issues"
   },
   "homepage": "https://github.com/kkxxll/webpack3#readme",
-  "dependencies": {
-    "lodash": "^4.17.5"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "webpack": "^3.11.0"
+    "css-loader": "^0.28.10",
+    "style-loader": "^0.20.2"
   }
 }
