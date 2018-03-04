@@ -33,6 +33,16 @@ module.exports = {
                             }
                         },
                         {
+                            loader: 'postcss-loader',
+                            options: {
+                                ident: 'postcss',
+                                plugins: [
+                                    // require('autoprefixer')(),//postcss-cssnext中已包含了autoprefixer
+                                    require('postcss-cssnext')()
+                                ]
+                            }
+                        },
+                        {
                             loader: 'sass-loader'
                         }
                     ]

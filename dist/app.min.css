@@ -4,6 +4,9 @@ html {
 .src-css-base_bigbox_1RWkp {
   border: 2px solid red;
   background: yellow; }
+
+h5 {
+  color: red; }
 html {
     background: #eee;
 }
@@ -11,11 +14,23 @@ html {
 .src-css-base_bigbox_1RWkp {
     border: 2px solid red;
     background: yellow; 
+}
+
+:root {
+    --mainColor: red;
+}
+
+h5 {
+    color: var(--mainColor)
 }html {
   color: purple; }
 
 .src-css-common_box_3OZQl {
   height: 100px;
-  background: #333; }
+  background: #333;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s; }
 .src-css-a_a_1LPPD {
   font-size: 20px; }

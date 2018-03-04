@@ -1,11 +1,15 @@
-#### 提取css
+#### postcss
 
-#### 两种方法
-- extract-loader
-- ExtractTextWebpackPlugin（主流）
+安装
+postcss
+postcss-loader
+autoprefixer 加前缀
+cssnano
+postcss-cssnext
 
+cssnano用于压缩css，css-loader中的压缩就是利用这个插件的
 
-打包后的min.css不会自动引入到html，需要手动添加link
+npm i postcss postcss-loader autoprefixer cssnano postcss-cssnext -D
 
-###### ExtractTextWebpackPlugin的allChunks参数
-默认是false 表示异步加载的css样式默认不会被引入
+##### browserslist
+有些配置是所有插件共用的，就可以放在package.json中的`browserslist`字段里，或者添加.browserslist文件也可

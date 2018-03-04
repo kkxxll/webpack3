@@ -8,4 +8,5 @@ html {
     composes: bigbox from './base.scss';
     height: 100px;
     background: #333;
+    transition: transform 1s;
 } 

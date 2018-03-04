@@ -6,3 +6,11 @@ html {
     border: 2px solid red;
     background: yellow; 
 }
+
+:root {
+    --mainColor: red;
+}
+
+h5 {
+    color: var(--mainColor)
+}
