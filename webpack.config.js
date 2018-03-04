@@ -113,6 +113,9 @@ module.exports = {
                 path.join(__dirname, './src/*.js')
             ])
         }),
+        new Webpack.ProvidePlugin({
+            $: 'jquery'
+        }),
         new Webpack.optimize.UglifyJsPlugin()
     ]
 }
