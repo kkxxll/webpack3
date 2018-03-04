@@ -33,3 +33,5 @@ useRelativePath: true
 pngquant: {
     quality: 80
 }
+
+雪碧图会生成两张，其中一张是压缩后的

@@ -68,6 +68,7 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
+                            name: '[name][hash:5].[ext]',
                             limit: 1000,
                             publicPath: './assets/imgs/sprites/',
                             outputPath: '',

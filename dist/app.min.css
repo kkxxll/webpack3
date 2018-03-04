@@ -10,13 +10,13 @@ div {
 .box1 {
   width: 100px;
   height: 100px;
-  background-image: url(./assets/imgs/sprites/cd0673bd54eaa69b5902c84f6ec6a7cd.png);
+  background-image: url(./assets/imgs/sprites/spritecd067.png);
   background-position: 0px 0px;
   background-size: 128px 64px;
 }
 
 .box2 {
-  background-image: url(./assets/imgs/sprites/cd0673bd54eaa69b5902c84f6ec6a7cd.png);
+  background-image: url(./assets/imgs/sprites/spritecd067.png);
   background-position: -64px 0px;
   background-size: 128px 64px;
 }
