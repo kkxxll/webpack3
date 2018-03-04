@@ -6,3 +6,5 @@ import base from './css/base.scss'
 // var div = document.createElement('div')
 // div.className = 'box'
 // app.appendChild(div)
+
+console.log('不会报错：', $)
