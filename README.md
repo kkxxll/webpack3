@@ -1,7 +1,5 @@
-### 文件处理
-- 图片处理
-- 字体js库
-- 第三方js库（非node_modules里的）
+### html处理
 
-
-##### 第三方js库
+options
+inject: false 表示webpack打包生成的文件不需要自动引入到html中
+chunks: ['app'] 当有多个入口js时，可以使用该参数指定哪些需要被打包

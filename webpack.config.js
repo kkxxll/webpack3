@@ -1,6 +1,7 @@
 var path = require('path')
 var Webpack = require('webpack')
 var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 var PurifyCSS = require('purifycss-webpack')
 var glob = require('glob-all')
@@ -11,8 +12,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        publicPath: './dist/',
-        filename: '[name].bundle.js',
+        publicPath: './',
+        filename: '[name]-bundle-[hash:5].js',
         chunkFilename: '[name].chunk.js'
     },
     resolve: {
@@ -121,7 +122,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextWebpackPlugin({
-            filename: '[name].min.css'
+            filename: 'css/[name]-bundle-[hash:5].css'
         }),
         new PurifyCSS({
             paths: glob.sync([
@@ -129,9 +130,15 @@ module.exports = {
                 path.join(__dirname, './src/*.js')
             ])
         }),
-        // new Webpack.ProvidePlugin({
-        //     $: 'jquery'
-        // }),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './index.html',
+            // inject: false
+            chunks: ['app'],
+            minify: {
+                collapseWhitespace: true
+            }
+        }),
         new Webpack.optimize.UglifyJsPlugin()
     ]
 }
