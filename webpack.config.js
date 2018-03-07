@@ -3,6 +3,7 @@ var Webpack = require('webpack')
 var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var HtmlInlineChunkPlugin = require('html-webpack-inline-chunk-plugin')
+var CleanWebpackPlugin = require('clean-webpack-plugin')
 
 var PurifyCSS = require('purifycss-webpack')
 var glob = require('glob-all')
@@ -14,7 +15,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         publicPath: './',
-        filename: '[name]-bundle-[hash:5].js',
+        filename: 'js/[name]-bundle-[hash:5].js',
         chunkFilename: '[name].chunk.js'
     },
     resolve: {
@@ -164,6 +165,7 @@ module.exports = {
                 collapseWhitespace: true
             }
         }),
-        new Webpack.optimize.UglifyJsPlugin()
+        new Webpack.optimize.UglifyJsPlugin(),
+        new CleanWebpackPlugin(['dist'])
     ]
 }
