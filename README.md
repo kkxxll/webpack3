@@ -1,8 +1,5 @@
-### html处理
+### 优化： 提取载入webpack加载的代码（把script插入到html里，可以减少js的请求）
+<!-- inline-manifest-webpack-plugin -->
+htnl-webpack-inline-chunk-plugin
 
-options
-inject: false 表示webpack打包生成的文件不需要自动引入到html中
-chunks: ['app'] 当有多个入口js时，可以使用该参数指定哪些需要被打包
-
-##### html中引入图片
-html-loader
+打包后发现 公共的代码被提取后嵌入到html中了

@@ -2,6 +2,7 @@ var path = require('path')
 var Webpack = require('webpack')
 var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlInlineChunkPlugin = require('html-webpack-inline-chunk-plugin')
 
 var PurifyCSS = require('purifycss-webpack')
 var glob = require('glob-all')
@@ -23,6 +24,17 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['env']
+                        }
+                    }
+                ]
+            },
             {
                 test: /\.scss$/,
                 use: ExtractTextWebpackPlugin.extract({
@@ -136,11 +148,18 @@ module.exports = {
                 path.join(__dirname, './src/*.js')
             ])
         }),
+        // 提取公共
+        new Webpack.optimize.CommonsChunkPlugin({
+            name: 'manifest'
+        }),
+        new HtmlInlineChunkPlugin({
+            inlineChunks: ['manifest']
+        }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './index.html',
             // inject: false
-            chunks: ['app'],
+            // chunks: ['app'],
             minify: {
                 collapseWhitespace: true
             }
