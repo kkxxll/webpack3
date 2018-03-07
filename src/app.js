@@ -7,4 +7,4 @@ import base from './css/base.scss'
 // div.className = 'box'
 // app.appendChild(div)
 
-console.log('不会报错：', $)
+console.log('不会报错dd：', $)

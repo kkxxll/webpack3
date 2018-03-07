@@ -18,6 +18,18 @@ module.exports = {
         filename: 'js/[name]-bundle-[hash:5].js',
         chunkFilename: '[name].chunk.js'
     },
+    devServer: {
+        port: 9000,
+        // historyApiFallback: true
+        historyApiFallback: {
+            rewrites: [
+                {
+                    from: '/pages/a',
+                    to: '/pages/a.html'
+                }
+            ]
+        }
+    },
     resolve: {
         alias: {
             jquery$: path.resolve(__dirname, 'src/libs/jquery.min.js')
